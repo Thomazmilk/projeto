@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <title>Token</title>
 
-    <?php
-    if(!isset($_POST["token"]))
 
-    $token = $_POST["token"];
+</head>
+<body>
+    
+
+    <form method="post" action="#"> 
+        Token: <input type= "text" name="token" id="token"/>
+    
+        <input type ="submit" value ="Cadastrar" name="botao"  onclick="funcao1()"/>
+
+    </form>
+
+    <?php
+
+    $token="";
+
+    $token = isset($_POST["token"]) ? $_POST ["token"] : null;
     
     //Conecta no banco
     $cadastrar = new MYSQLI("localhost", "root", "", "projeto");
@@ -34,22 +47,11 @@
     ?>
 
 <script>
-window.alert("Dados Salvos!");
-botao.addEventListener("click", 'anonymous function');
+function funcao1()
+{
+alert("Dados salvos!");
+}
 </script>
-
-</head>
-<body>
-
-    <form method="post" action="#"> 
-        token: <input type= "text" name="token" id="token"/>
-    
-        <input type ="submit" value ="Cadastrar" id="botao"/>
-
-    </form>
-
-    </body>
+     
+</body>
 </html>
-
-
-
