@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stilo.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stilo.css"/>
 
     <title>Document</title>
 </head>
 <body>
 
-
-    <h1>898 - Relatório de Emissões via Cliente API</h1>
+    <div class="container">
+        <h1 class="fs-3">898 - Relatório de Emissões via Cliente API</h1>
     
-    <form method="post" action="#">
-        Data Emissão:
-        <input id="data_ini" type="date" name="data_ini">
-        <input id="data_fim" type="date" name="data_fim">
-        <input type="submit" id="pesquisar" id="pesquisar" value="Pesquisar">
-    </form>
-
-    <form method="post">
-        <input type="submit" name="importar" value="Importar API"/>
-    </form>
-
+</br>    
+        <form method="post" action="#">
+            Data Emissão:
+            <input id="data_ini" type="date" name="data_ini">
+            <input id="data_fim" type="date" name="data_fim">
+            <input type="submit" id="pesquisar" id="pesquisar" value="Pesquisar">
+        </form>
+</br>
+        <form method="post">
+            <input type="submit" name="importar" value="Importar API"/>
+        </form>
+</br>
     <div>
-        <table class="table">
+        <table class="table table-bordered table-hover table-responsive">
             <thead class="table-light">
 
                 <tr>
@@ -90,6 +91,11 @@
                 $status = $array['status'];
                 $tipo = $array['tipo'];
                 
+                $date = explode(" ", $data_emissao);
+                $data1 = $date[0];
+                $hora = $date[1]; 
+                $dateBR = implode( '/', array_reverse( explode( '-', $data1 ) ) );
+
 
                 echo "<tr>
                 <td>$id_minuta</td>
@@ -100,7 +106,7 @@
                 <td>$frete</td>
                 <td>$peso</td>
                 <td>$volume</td>
-                <td>$data_emissao</td>
+                <td>$dateBR $hora</td>
                 <td>$status</td>
                 <td>$tipo</td>
                 </tr>";
@@ -141,6 +147,11 @@
                 $status = $array['status'];
                 $tipo = $array['tipo'];
                 
+                
+                $date = explode(" ", $data_emissao);
+                $data1 = $date[0];
+                $hora = $date[1]; 
+                $dateBR = implode( '/', array_reverse( explode( '-', $data1 ) ) );
 
                 echo "<tr>
                 <td></td>
@@ -151,7 +162,7 @@
                 <td>$frete</td>
                 <td>$peso</td>
                 <td>$volume</td>
-                <td>$data_emissao</td>
+                <td>$dateBR $hora</td>
                 <td>$status</td>
                 <td>$tipo</td>
                 </tr>";
@@ -177,9 +188,12 @@
         }
 
     if(isset($_POST['importar'])) {
+
         
         $filename = "https://app-brudam.herokuapp.com/kabum/api/show/remessas/" . $t;
         $data = file_get_contents($filename);
+
+        if($data > 0){
         $array = json_decode ($data, true);
 
     //Importa array minuta
@@ -221,12 +235,15 @@
     }
   }
  }
+ 
+}else {
+    echo "ERRO: Token inválido!";
+}
 
 }
 
     ?>  
-
+</div>
     <a href="index.php">Voltar</a>
-    
 </body>
 </html>

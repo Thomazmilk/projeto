@@ -82,4 +82,6 @@ Funcionalidades dos botões:
 
 IMPORTAR API: O sistema lê os dados da URL se o ultimo cadastro da tabela “token” coluna “token”  for a palavra – chave válida, após deve gravar as informações da API no banco de dados. 
 
+Caso o sistema não consiga reconhecer a URL deve imprimir em tela "ERRO: Token inválido" ao final da página.
+
 PESQUISAR: O sistema consulta e imprime em tela todas as colunas das tabelas minuta e coleta, filtrando por data caso os dois input date contenham valor. 

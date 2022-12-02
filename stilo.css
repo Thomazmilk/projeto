@@ -12,25 +12,35 @@
     box-sizing: border-box;
 }
 
-.coluna1{
+
+.coluna1 {
     text-align: center;
     font-size: 50px;
 }
 
 
-.janela{
+.janela {
   word-spacing: 30px;
   text-decoration: none;
   font-weight: bold;
+  font color: #ff8c00;
 
 }
 
-.input input {
-    width: 100%;
-    height: 34px;    
-    padding-left: 5px;
-    box-sizing: border-box;
+.h {
+	font-size: 60px;
+	text-align: center;
+} 
+
+#relatorio {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
 }
-
-
-

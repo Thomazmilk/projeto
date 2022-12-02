@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stilo.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Token</title>
 
 
@@ -12,7 +13,7 @@
 <div id="container">
     <div class= "janela">
         <label>
-            <a href="token.php">Token</a>
+            <a href="index.php">Menu</a>
             <a href="relatorio.php">Relatório</a>
         </label>
     </div>
@@ -20,13 +21,13 @@
 </br>
 </br>
 
-    <form method="post" action="#"> 
-    
-        Token: <input type= "text" name="token" id="token"/>
-                
-        <input type ="submit" value ="Cadastrar" name="botao"  onclick="funcao1()"/>
-    </form>
-       
+    <div class="mb-3">
+        <form method="post" action="#"> 
+            <label>Cadastre seu Token</label> <input class="form-control" type= "text" name="token" id="token"/>
+</br>                
+            <input type ="submit" value ="Cadastrar" name="botao"  onclick="funcao1()"/>
+        </form>
+    </div>       
     
     
 </div>
@@ -66,10 +67,9 @@
     ?>
 
 <script>
-function funcao1()
-{
-alert("Dados salvos!");
-}
+    function funcao1(){
+        alert("Dados salvos!");
+    }
 </script>
 
       
