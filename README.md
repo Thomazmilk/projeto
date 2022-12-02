@@ -12,7 +12,7 @@ Navegue até o repositório do [GitHub] (https://github.com/Thomazmilk/projeto) 
 # 🛠️ Abrir e rodar o projeto
 Para executar o projeto, é necessário ter instalado software que integre o código PHP e o banco de dados, para rodar o sistema foi utilizado o XAMPP.
 
-No mysql workbench realizar a criação das tabelas com os seguintes comandos;
+No mysql workbench realizar a criação das tabelas com os seguintes comandos.
 
 
 **CRIAR TABELA PARA CONSUMIR AS INFORMAÇÕES DAS MINUTAS.** 
@@ -60,13 +60,15 @@ token varchar(33) not null
 
 
 
-# FUNCIONALIDADE 
+# Funcionalidade 
 
 **Tela INDEX**
+
 A tela inicial mostra um menu com as opções para acessar a página de cadastro do Token ou entrar no relatório.
 
 
 **Tela TOKEN** 
+
 O usuário deve acrescentar a palavra–chave que completa URL da API e apertar o no botão CADASTRAR. 
 
 A palavra-chave será gravada na tabela “token” coluna “token” no bando de dados. 
@@ -75,6 +77,7 @@ PALAVRA – CHAVE: ce019046e010bf7f1aab029cc688c9fd
 
 
 **Tela RELATÓRIO**
+
 Funcionalidades dos botões: 
 
 IMPORTAR API: O sistema lê os dados da URL se o ultimo cadastro da tabela “token” coluna “token”  for a palavra – chave válida, após deve gravar as informações da API no banco de dados. 
