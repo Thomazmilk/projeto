@@ -60,7 +60,7 @@ token varchar(33) not null
 
 
 
-# Funcionalidade 
+# Testando Funcionalidade 
 
 **Tela INDEX**
 
@@ -69,11 +69,11 @@ A tela inicial mostra um menu com as opções para acessar a página de cadastro
 
 **Tela TOKEN** 
 
-O usuário deve acrescentar a palavra–chave que completa URL da API e apertar o no botão CADASTRAR. 
+O usuário deve acrescentar a palavra–chave que completa URL da API e apertar no botão CADASTRAR. 
 
 A palavra-chave será gravada na tabela “token” coluna “token” no bando de dados. 
 
-PALAVRA – CHAVE: ce019046e010bf7f1aab029cc688c9fd
+PALAVRA–CHAVE: ce019046e010bf7f1aab029cc688c9fd
 
 
 **Tela RELATÓRIO**

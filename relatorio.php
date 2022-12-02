@@ -33,10 +33,10 @@
                 <tr>
                 <th>Minuta</th>
                 <th>Coleta</th>
-                <th>Ct-e</th>
+                <th>Chave Ct-e</th>
                 <th>Origem</th>
                 <th>Destino</th>
-                <th>Frete</th>
+                <th>Valor Frete</th>
                 <th>Peso</th>
                 <th>Volume</th>
                 <th>Data Emissão</th>
@@ -95,7 +95,8 @@
                 $data1 = $date[0];
                 $hora = $date[1]; 
                 $dateBR = implode( '/', array_reverse( explode( '-', $data1 ) ) );
-
+                $pesof = number_format( $peso, 2, ',', '.' );
+                $fretef = number_format( $frete, 2, ',', '.' );
 
                 echo "<tr>
                 <td>$id_minuta</td>
@@ -103,8 +104,8 @@
                 <td>$cte</td>
                 <td>$origem</td>
                 <td>$destino</td>
-                <td>$frete</td>
-                <td>$peso</td>
+                <td>$fretef</td>
+                <td>$pesof</td>
                 <td>$volume</td>
                 <td>$dateBR $hora</td>
                 <td>$status</td>
@@ -152,6 +153,8 @@
                 $data1 = $date[0];
                 $hora = $date[1]; 
                 $dateBR = implode( '/', array_reverse( explode( '-', $data1 ) ) );
+                $pesof = number_format( $peso, 2, ',', '.' );
+                $fretef = number_format( $frete, 2, ',', '.' );
 
                 echo "<tr>
                 <td></td>
@@ -159,8 +162,8 @@
                 <td></td>
                 <td>$origem</td>
                 <td>$destino</td>
-                <td>$frete</td>
-                <td>$peso</td>
+                <td>$fretef</td>
+                <td>$pesof</td>
                 <td>$volume</td>
                 <td>$dateBR $hora</td>
                 <td>$status</td>
@@ -244,6 +247,6 @@
 
     ?>  
 </div>
-    <a href="index.php">Voltar</a>
+    <a href="index.php" class="link-info">Voltar</a>
 </body>
 </html>

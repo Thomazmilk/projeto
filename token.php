@@ -11,10 +11,10 @@
 <body>
     
 <div id="container">
-    <div class= "janela">
+    <div>
         <label>
-            <a href="index.php">Menu</a>
-            <a href="relatorio.php">Relatório</a>
+            <a href ="index.php" class="link-info">Menu</a>
+            <a href="relatorio.php" class="link-info">Relatório</a>
         </label>
     </div>
 
@@ -40,26 +40,18 @@
 
     $token = isset($_POST["token"]) ? $_POST ["token"] : false;
     
-    //Conecta no banco
     $cadastrar = new MYSQLI("localhost", "root", "", "projeto");
     
-    //Não grava automático
+ 
     $cadastrar ->autocommit(false);
 
-    //Retorna erro
+   
     if(!MYSQLI_connect_errno()){
 
-        //codigo sql para gravar
-        //aspas simples para indicar que e uma string, aspas por conta do banco
-
         $cadastrar-> query("INSERT INTO token(id_token, token) values (null,'".$token."')");
-
-        //confirmar a gravacao
-
         $cadastrar -> commit();
     }
 
-    //Fecha banco
     $cadastrar ->close();
 
 }
