@@ -84,4 +84,6 @@ IMPORTAR API: O sistema lê os dados da URL se o ultimo cadastro da tabela “to
 
 Caso o sistema não consiga reconhecer a URL deve imprimir em tela "ERRO: Token inválido" ao final da página.
 
-PESQUISAR: O sistema consulta e imprime em tela todas as colunas das tabelas minuta e coleta, filtrando por data caso os dois input date contenham valor. 
+PESQUISAR: O sistema consulta e imprime em tela todas as colunas das tabelas minuta e coleta, filtrando por data caso os dois filtros contenham valor. 
+
+Ao final da página tem um link VOLTAR que direciona para o Menu inicial.
