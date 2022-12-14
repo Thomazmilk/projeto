@@ -193,7 +193,7 @@
     if(isset($_POST['importar'])) {
 
         
-        $filename = "https://app-brudam.herokuapp.com/kabum/api/show/remessas/" . $t;
+        $filename = "http://172.17.1.21:3000/kabum/api/show/remessas/" . $t;
         $data = file_get_contents($filename);
 
         if($data > 0){
